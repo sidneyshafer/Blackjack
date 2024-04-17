@@ -1,0 +1,40 @@
+﻿@model Game
+
+@{
+    ViewBag.Title = "Blackjack";
+}
+
+<hand-heading name="Dealer"
+              total="@Model.Dealer.MustShowCards ?
+                      Model.Dealer.Hand.Total : 0">
+</hand-heading>
+
+<vc:show-hand-images hand="@Model.Dealer.Hand">
+</vc:show-hand-images>
+
+<hand-heading name="Player"
+              total="@Model.Player.Hand.HasCards ? 
+                      Model.Player.Hand.Total : 0">
+</hand-heading>
+
+<vc:show-hand-images hand="@Model.Player.Hand">
+</vc:show-hand-images>
+
+<div class="row mb-2">
+
+    <div class="col-2 offset-3">
+        <submit-button action="Deal" disabled="@(!Model.NeedsDeal)">
+        </submit-button>
+    </div>
+
+    <div class="col-2">
+        <submit-button action="Hit" disabled="@(Model.NeedsDeal)">
+        </submit-button>
+    </div>
+
+    <div class="col-2">
+        <submit-button action="Stand" disabled="@(Model.NeedsDeal)">
+        </submit-button>
+    </div>
+
+</div>

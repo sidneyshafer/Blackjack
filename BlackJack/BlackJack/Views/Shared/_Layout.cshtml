@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container text-center">
+        <header>
+            <h1 class="bg-dark text-white p-4">Blackjack</h1>
+        </header>
+
+        <main role="main">
+            <temp-message />
+            @RenderBody()
+        </main>
+
+        <footer>
+            <vc:current-winnings></vc:current-winnings>
+        </footer>
+    </div>
+</body>
+</html>
