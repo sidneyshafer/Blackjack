@@ -1,6 +1,6 @@
 # BlackJack
 
-An ASP.NET Core MVC web application that targets .NET 6.0 and uses C#, views, view controllers, and tag helpers to play a game of Blackjack.
+An ASP.NET Core MVC Web Application targeting .NET 6.0 and using C#, views, view controllers, and tag helpers to play a game of Blackjack in a web browser.
 
 ## User Interface
 ![image](https://github.com/sidneyshafer/Blackjack/assets/66838571/42ea1778-0c12-44ea-be5d-efaef14c5412)
